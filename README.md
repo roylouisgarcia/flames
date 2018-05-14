@@ -24,3 +24,17 @@ My research suggests other ways of arriving at a result. One way is to remove th
 
 These two approaches can be incorporated in this project and provide options to the users
 
+## Screenshots (Browser Implementation)
+
+![Screenshot 1](browser1.jpg)
+
+![Screenshot 2](browser2.jpg)
+
+![Screenshot 3](browser3.jpg)
+
+## Screenshots (Android Implementation)
+
+
+![Screenshot 4](capture1.jpg)
+
+![Screenshot 5](capture2.jpg)
