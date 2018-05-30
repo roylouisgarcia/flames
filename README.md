@@ -1,6 +1,6 @@
 # FLAMES: Relationship Predictor
 
-This is an HTML, JAVASCRIPT, AND CSS implementation of a game that accepts two names and returns a relationship prediction based on the number of common letters. View the project (here)[https://roylouislgarcia.github.io/portfolioentries/currentprojects/flames/]
+This is an HTML, JAVASCRIPT, AND CSS implementation of a game that accepts two names and returns a relationship prediction based on the number of common letters. View the project [here][flamesinportfolio]
 
 ## Installation
 
@@ -38,3 +38,5 @@ These two approaches can be incorporated in this project and provide options to 
 ![Screenshot 4](capture1.jpg)
 
 ![Screenshot 5](capture2.jpg)
+
+[flamesinportfolio]: https://roylouislgarcia.github.io/portfolioentries/currentprojects/flames/
