@@ -1,7 +1,7 @@
-/* variable Declarations*/
+/* */
 var firstName = "";
 var secondName = "";
-var invalidNameflag = 0;
+
 var fatesComment = "I am Fate! <br> If you suddenly change your mind, click my picture and enter another person\'s name. Now, if you are ready to find out what FLAMES have in store for both of you, press \"Continue\"";
 
 
@@ -9,8 +9,11 @@ $( document ).ready(function() {
     $(".jumbotron").fadeIn("slow");
     $(".panel-body").fadeIn("slow");
     $(".panel-footer").fadeIn("slow");
+    console.log("Document Ready!");
 });
 
+/* Input Validation */
+var invalidNameflag = 0;
 
 function inputPolice(name) {
     invalidNameflag = 0;
@@ -23,6 +26,7 @@ function inputPolice(name) {
     }
 }
 
+/* main algorithm */
 function processFlames(name1, name2){
     var name1L = name1.toLowerCase();
     var name2L = name2.toLowerCase();
