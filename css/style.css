@@ -44,8 +44,9 @@ body{
 }
 button{
   float: right;
+  margin: 5px;
 }
-#finishbtn{
+#finishbtn, #resetinputbtn{
     display: none;
 }
 .container{

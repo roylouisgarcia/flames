@@ -20,8 +20,9 @@ function inputPolice(name) {
     var patt = /[^.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVEXYZ ]/gi;
     if (patt.test(name) || (name === "")) {
         invalidNameflag = invalidNameflag + 1;
-        return "Ooops Please enter a valid name that does not have a digit, a period, or weird characters. Please, " + name + " , try again. Click Fate's picture to enter your valid name.";
-    } else {
+        $("#resetinputbtn").fadeIn("slow");
+        return "Ooops Please enter a valid name that does not have a digit, a period, or weird characters.";
+      } else {
         return name;
     }
 }
@@ -169,7 +170,16 @@ function processFlames(name1, name2){
 }
 
 
-
+function correctInput(){
+    $(".container").hide("slow");
+    $(".panel-default").show("slow");
+    document.getElementById("demo").innerHTML = fatesComment;
+    document.getElementById("p1Name").innerHTML = "";
+    document.getElementById("p2Name").innerHTML = "";
+    document.getElementById("lover1").innerHTML = "";
+    document.getElementById("lover2").innerHTML = "";
+    invalidNameflag = 0;
+}
 
 
 $("#submit").on("click", function () {
@@ -182,23 +192,17 @@ $("#submit").on("click", function () {
     document.getElementById("lover2").innerHTML = inputPolice(secondName);
     if (invalidNameflag > 0) {
         $("#continuebtn").prop("disabled", true);
+        $("#resetinputbtn").fadeIn("slow");
     } else {
         $("#continuebtn").prop("disabled", false);
+        $("#resetinputbtn").hide("slow");
     }
-   // document.getElementById("invalidNameFlag").innerHTML = invalidNameflag + firstName + secondName;
+
 });
 
 
 $("#cupid").on("click", function () {
-    $(".container").hide("slow");
-    $(".panel-default").show("slow");
-    document.getElementById("demo").innerHTML = fatesComment;
-    document.getElementById("p1Name").innerHTML = "";
-    document.getElementById("p2Name").innerHTML = "";
-    document.getElementById("lover1").innerHTML = "";
-    document.getElementById("lover2").innerHTML = "";
-    invalidNameflag = 0;
-   // document.getElementById("invalidNameFlag").innerHTML = invalidNameflag + firstName + secondName;
+    correctInput();
 });
 
 
@@ -210,5 +214,8 @@ $("#continuebtn").on("click", function () {
     $("#continuebtn").hide("slow");
     $("#cupid").hide("slow");
     processFlames(firstName, secondName);
-
 });
+
+$("#resetinputbtn").on("click", function(){
+    correctInput();
+})
